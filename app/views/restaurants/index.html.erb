@@ -1,0 +1,13 @@
+<h1 class="my-3">Restaurants</h1>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+  <li class="mb-3">
+    <strong><%= link_to restaurant.name, restaurant_path(restaurant), class: "fs-5" %></strong>
+    <br>
+    <i class="fa-solid fa-utensils"></i> <%= restaurant.category %>'s cooking
+    <br>
+    <i class="fa-solid fa-map-location-dot"></i> <%= restaurant.address %>
+  </li>
+  <% end %>
+</ul>
